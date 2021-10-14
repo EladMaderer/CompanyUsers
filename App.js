@@ -16,11 +16,10 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-   container: {
-       flex: 1,
-       backgroundColor:
-       colors.secondaryBG
-   }
+  container: {
+    flex: 1,
+    backgroundColor: colors.secondaryBG,
+  },
 });
 
 export default App;

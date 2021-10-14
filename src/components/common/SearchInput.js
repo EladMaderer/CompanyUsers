@@ -1,21 +1,24 @@
 import React from 'react';
 import {TextInput, StyleSheet} from 'react-native';
+import {colors} from '../utilities/globalStyles';
 
 const SearchInput = props => (
   <TextInput
     style={styles.input}
     autoComplete="off"
     autoCorrect={false}
+    placeholderTextColor={colors.secondaryTextColor}
     {...props}
   />
 );
 
 const styles = StyleSheet.create({
   input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
+    height: 60,
+    backgroundColor: 'rgba(42, 41, 46, 0.6)',
     padding: 10,
+    fontSize: 18,
+    color: colors.mainTextColor,
   },
 });
 
