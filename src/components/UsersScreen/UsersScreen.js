@@ -43,31 +43,35 @@ const UsersScreen = ({navigation}) => {
   }, []);
 
   const onEndScroll = () => {
-    setFetchFromIndex(indexIncrement);
+
     if (users.length === fetchFromIndex) {
       fetchUsersLimit(fetchFromIndex, indexIncrement, searchTerm);
+      setFetchFromIndex(indexIncrement);
     }
   };
 
   const UserCard = ({item}) => {
     const {first_name, last_name, image, role} = item;
     return (
-      <TouchableOpacity
-        activeOpacity={0.6}
-        style={styles.userCard}
-        onPress={() => {
-          navigation.navigate(routes.SINGLE_USERS_SCREEN, {item});
-        }}>
-        <Image
-          style={styles.userImage}
-          source={image ? {uri: image} : DEFAULT_IMG}
-          defaultSource={DEFAULT_IMG}
-        />
-        <View>
-          <UText style={styles.userName}>{`${first_name} ${last_name}`}</UText>
-          <UText style={styles.role}>{role}</UText>
-        </View>
-      </TouchableOpacity>
+      <View style={styles.userCard}>
+        <TouchableOpacity
+          style={styles.userCardButton}
+          activeOpacity={0.6}
+          onPress={() => {
+            navigation.navigate(routes.SINGLE_USERS_SCREEN, {item});
+          }}>
+          <Image
+            style={styles.userImage}
+            source={image ? {uri: image} : DEFAULT_IMG}
+            defaultSource={DEFAULT_IMG}
+          />
+          <View>
+            <UText
+              style={styles.userName}>{`${first_name} ${last_name}`}</UText>
+            <UText style={styles.role}>{role}</UText>
+          </View>
+        </TouchableOpacity>
+      </View>
     );
   };
 
@@ -84,6 +88,9 @@ const UsersScreen = ({navigation}) => {
         value={searchTerm}
         placeholder={strings.search_user}
         autoCapitalize="none"
+        autoComplete="off"
+        spellCheck={false}
+        autoCorrect={false}
       />
       <FlatList
         contentContainerStyle={styles.listContainer}
@@ -107,10 +114,12 @@ const styles = StyleSheet.create({
   },
   userCard: {
     flex: 1,
-    flexDirection: 'row',
-    padding: 20,
     marginBottom: 20,
     ...GStyles.shadow,
+  },
+  userCardButton: {
+    flexDirection: 'row',
+    padding: 20,
   },
   BgImage: {
     ...StyleSheet.absoluteFillObject,
