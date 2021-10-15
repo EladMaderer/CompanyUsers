@@ -1,4 +1,4 @@
-#Company Users
+# Company Users
 
 **Get the full info of your Employees/Users you are managing**
 
@@ -13,7 +13,7 @@
 
   ```$ git clone https://github.com/EladMaderer/CompanyUsers```
 
-##Install
+## Install
 `npm install`
 ###
 Run on iOS
