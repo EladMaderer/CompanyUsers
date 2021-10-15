@@ -31,7 +31,7 @@ const UsersScreen = ({navigation}) => {
   const {loading, fetchUsersLimit} = useApi();
 
   useEffect(() => {
-    if (searchTerm.length !== 1) {
+    if (searchTerm.length !== 1 && !loading) {
       setFetchFromIndex(FETCH_USERS_LIMIT);
       dispatch(clearUsers());
       fetchUsersLimit(0, FETCH_USERS_LIMIT, searchTerm);
