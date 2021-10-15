@@ -26,8 +26,7 @@ const UsersScreen = ({navigation}) => {
   // For UserCard
   const SPACING = 20;
   const AVATAR_SIZE = 70;
-  const DEFAULT_IMG =
-    'https://img.icons8.com/officel/144/000000/person-neutral-skin-type-4.png';
+  const DEFAULT_IMG = require('../../../assets/images/defaultPerson.png');
 
   const {loading, fetchUsersLimit} = useApi();
 
@@ -50,6 +49,7 @@ const UsersScreen = ({navigation}) => {
     const {first_name, last_name, image, role} = item;
     return (
       <TouchableOpacity
+        activeOpacity={0.6}
         style={styles.userCard}
         onPress={() => {
           navigation.navigate('SingleUserScreen', {item});
@@ -61,7 +61,8 @@ const UsersScreen = ({navigation}) => {
             borderRadius: AVATAR_SIZE,
             marginRight: SPACING / 2,
           }}
-          source={{uri: image ? image : DEFAULT_IMG}}
+          source={image ? {uri: image} : DEFAULT_IMG}
+          defaultSource={DEFAULT_IMG}
         />
         <View>
           <UText style={styles.userName}>{`${first_name} ${last_name}`}</UText>
