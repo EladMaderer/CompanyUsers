@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {routes} from '../../navigation/types';
-import {FETCH_USERS_LIMIT} from '../../../api/apTypes';
+import {FETCH_USERS_LIMIT} from '../../../api/apiTypes';
 import {GStyles} from '../utilities/globalStyles';
 import strings from '../../../assets/strings.json';
 import backActionHandler from '../utilities/backActionHandler';

@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
     height: 60,
     backgroundColor: 'rgba(42, 41, 46, 0.6)',
     padding: 10,
-    fontSize: 18,
+    fontSize: 20,
+    fontWeight: '500',
     color: colors.mainTextColor,
   },
 });

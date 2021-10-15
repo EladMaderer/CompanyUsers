@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {setUsers} from '../redux/actions/usersActions';
-import {BASE_URL} from './apTypes';
+import {BASE_URL} from './apiTypes';
 
 export const useApi = () => {
   const [error, setError] = useState(false);
