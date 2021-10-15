@@ -12,16 +12,20 @@
 **Clone the repository**
 
   ```$ git clone https://github.com/EladMaderer/CompanyUsers```
+  
+**Clone the server repository (More instructions below)**
+
+  ```$ git clone https://github.com/EladMaderer/ExpressServer```
 
 ## Install
 `npm install`
 ###
 Run on iOS
-#####
+
 `npm run ios`
 
 Run on Android
-#####
+
 `npm run android`
 #
 
