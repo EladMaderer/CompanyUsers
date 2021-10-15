@@ -19,19 +19,30 @@ const SingleUserScreen = ({route}) => {
       </View>
       <>
         {first_name && (
-          <UText style={styles.textStyle}>
-            {`${strings.name} ${first_name} ${last_name}`}
-          </UText>
+          <View style={styles.textView}>
+            <UText style={styles.textTitle}>{strings.name}: </UText>
+            <UText style={styles.text}>
+              {first_name} {last_name}
+            </UText>
+          </View>
         )}
         {email && (
-          <UText style={styles.textStyle}>{`${strings.email} ${email}`}</UText>
+          <View style={styles.textView}>
+            <UText style={styles.textTitle}>{strings.email}: </UText>
+            <UText style={styles.text}>{email}</UText>
+          </View>
         )}
         {address && (
-          <UText
-            style={styles.textStyle}>{`${strings.address} ${address}`}</UText>
+          <View style={styles.textView}>
+            <UText style={styles.textTitle}>{strings.address}: </UText>
+            <UText style={styles.text}>{address}</UText>
+          </View>
         )}
         {role && (
-          <UText style={styles.textStyle}>{`${strings.role} ${role}`}</UText>
+          <View style={styles.textView}>
+            <UText style={styles.textTitle}>{strings.role}: </UText>
+            <UText style={styles.text}>{role}</UText>
+          </View>
         )}
       </>
     </View>
@@ -56,10 +67,18 @@ const styles = StyleSheet.create({
     height: 144,
     borderRadius: 144 / 2,
   },
-  textStyle: {
+  textView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  textTitle: {
     fontSize: 21,
     fontWeight: '700',
-    marginTop: 20,
+  },
+  text: {
+    fontSize: 17,
+    fontWeight: '700',
   },
 });
 

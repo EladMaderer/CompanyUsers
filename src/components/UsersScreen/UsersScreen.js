@@ -74,7 +74,7 @@ const UsersScreen = ({navigation}) => {
   /* onEndReached - Loading new data faster (before the bounce effect is done),
      But sometimes fire twice instead of once, when the user scroll very fast - known bug in iOS. */
   return (
-    <View style={{flex: 1}}>
+    <View>
       <Image
         source={require('../../../assets/images/BGImage.jpeg')}
         style={styles.BgImage}
@@ -86,7 +86,7 @@ const UsersScreen = ({navigation}) => {
         autoCapitalize="none"
       />
       <FlatList
-        contentContainerStyle={{padding: 20}}
+        contentContainerStyle={styles.listContainer}
         keyExtractor={({id}) => id}
         data={users}
         renderItem={UserCard}
@@ -101,6 +101,10 @@ const UsersScreen = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
+  listContainer: {
+    paddingHorizontal: 20,
+    paddingTop: 80,
+  },
   userCard: {
     flex: 1,
     flexDirection: 'row',

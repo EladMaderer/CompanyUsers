@@ -7,7 +7,7 @@ const SearchInput = props => (
     style={styles.input}
     autoComplete="off"
     autoCorrect={false}
-    placeholderTextColor={colors.secondaryTextColor}
+    placeholderTextColor="#bebad4"
     {...props}
   />
 );
@@ -15,11 +15,13 @@ const SearchInput = props => (
 const styles = StyleSheet.create({
   input: {
     height: 60,
-    backgroundColor: 'rgba(42, 41, 46, 0.6)',
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 100,
+    backgroundColor: 'rgba(42, 41, 46, 0.7)',
     padding: 10,
     fontSize: 20,
     fontWeight: '500',
-    color: colors.mainTextColor,
+    color: colors.secondaryTextColor,
   },
 });
 
