@@ -8,6 +8,14 @@ const SingleUserScreen = ({route}) => {
   const DEFAULT_IMG = require('../../../assets/images/defaultPerson.png');
   const {first_name, last_name, email, address, role, image} =
     route.params.item;
+
+  const RenderLine = ({title, text}) => (
+    <View style={styles.textView}>
+      <UText style={styles.textTitle}>{title}: </UText>
+      <UText style={styles.text}>{text}</UText>
+    </View>
+  );
+
   return (
     <View style={styles.container}>
       <View style={styles.imageView}>
@@ -26,24 +34,9 @@ const SingleUserScreen = ({route}) => {
             </UText>
           </View>
         )}
-        {email && (
-          <View style={styles.textView}>
-            <UText style={styles.textTitle}>{strings.email}: </UText>
-            <UText style={styles.text}>{email}</UText>
-          </View>
-        )}
-        {address && (
-          <View style={styles.textView}>
-            <UText style={styles.textTitle}>{strings.address}: </UText>
-            <UText style={styles.text}>{address}</UText>
-          </View>
-        )}
-        {role && (
-          <View style={styles.textView}>
-            <UText style={styles.textTitle}>{strings.role}: </UText>
-            <UText style={styles.text}>{role}</UText>
-          </View>
-        )}
+        {email && <RenderLine title={strings.email} text={email} />}
+        {address && <RenderLine title={strings.address} text={address} />}
+        {role && <RenderLine title={strings.role} text={role} />}
       </>
     </View>
   );

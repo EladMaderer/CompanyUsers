@@ -38,7 +38,7 @@ Run on Android
 ### Licence & Copyright
 
 
-© Elad Maderer <hamora@gmail.com>
+© Elad Maderer - <hamora@gmail.com>
 
 
  
