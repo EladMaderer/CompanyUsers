@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {setUsers} from '../redux/actions/usersActions';
-import {BASE_URL} from './apiProperties';
+import {BASE_URL} from './apTypes';
 
 export const useApi = () => {
   const [error, setError] = useState(false);
@@ -20,7 +20,6 @@ export const useApi = () => {
       setError(false);
     } catch (e) {
       // TODO: Create an error handler... In the distant future :)
-      console.log(e);
       setError(true);
       setLoading(false);
     }

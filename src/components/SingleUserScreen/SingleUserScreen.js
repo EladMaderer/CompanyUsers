@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Image, StyleSheet} from 'react-native';
 import UText from '../common/UText';
 import {GStyles} from '../utilities/globalStyles';
+import strings from '../../../assets/strings.json';
 
 const SingleUserScreen = ({route}) => {
   const DEFAULT_IMG = require('../../../assets/images/defaultPerson.png');
@@ -18,16 +19,20 @@ const SingleUserScreen = ({route}) => {
       </View>
       <>
         {first_name && (
-          <UText
-            style={
-              styles.textStyle
-            }>{`Name: ${first_name} ${last_name}`}</UText>
+          <UText style={styles.textStyle}>
+            {`${strings.name} ${first_name} ${last_name}`}
+          </UText>
         )}
-        {email && <UText style={styles.textStyle}>{`Email: ${email}`}</UText>}
+        {email && (
+          <UText style={styles.textStyle}>{`${strings.email} ${email}`}</UText>
+        )}
         {address && (
-          <UText style={styles.textStyle}>{`Address: ${address}`}</UText>
+          <UText
+            style={styles.textStyle}>{`${strings.address} ${address}`}</UText>
         )}
-        {role && <UText style={styles.textStyle}>{`Role: ${role}`}</UText>}
+        {role && (
+          <UText style={styles.textStyle}>{`${strings.role} ${role}`}</UText>
+        )}
       </>
     </View>
   );
@@ -47,9 +52,9 @@ const styles = StyleSheet.create({
     ...GStyles.shadow,
   },
   image: {
-    width: 150,
-    height: 150,
-    borderRadius: 75,
+    width: 144,
+    height: 144,
+    borderRadius: 144 / 2,
   },
   textStyle: {
     fontSize: 21,

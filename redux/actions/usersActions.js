@@ -8,6 +8,6 @@ export const searchUsers = users => ({
   type: SEARCH_USERS,
   payload: users,
 });
-export const clearUsers = users => ({
+export const clearUsers = () => ({
   type: CLEAR_USERS,
 });
