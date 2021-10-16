@@ -44,7 +44,6 @@ const UsersScreen = ({navigation}) => {
   }, []);
 
   const onEndScroll = () => {
-
     if (users.length === fetchFromIndex) {
       fetchUsersLimit(fetchFromIndex, indexIncrement, searchTerm);
       setFetchFromIndex(indexIncrement);
