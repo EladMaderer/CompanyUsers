@@ -34,9 +34,12 @@ Run on Android
 - In order for the app to run locally on Android, please change the url path to your own local ip -
 **Modify "BASE_URL" const inside "apiTypes.js"**
 ####
-- I had a Reanimated 2 animation, but
-[Image](https://pasteboard.co/BTEd6yhPDRh1.png)
-So I had to pass this time.
+- I had a Reanimated 2 animation, but "Reanimated 2 doesn't support remote debugging, only Flipper can be used for debugging."
+####
+
+[Reanimated 2 disclaimer](https://pasteboard.co/BTEd6yhPDRh1.png)
+####
+So I had to pass the animation with Reanimated 2 this time.
 
 #
 ### Licence & Copyright
