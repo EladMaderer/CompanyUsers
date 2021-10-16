@@ -35,7 +35,7 @@ Run on Android
 **Modify "BASE_URL" const inside "apiTypes.js"**
 ####
 - I had a Reanimated 2 animation, but
-![](https://pasteboard.co/BTEd6yhPDRh1.png)
+[Image](https://pasteboard.co/BTEd6yhPDRh1.png)
 So I had to pass this time.
 
 #
