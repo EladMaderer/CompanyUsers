@@ -10,7 +10,7 @@ const Stack = createNativeStackNavigator();
 
 const globalScreenOptions = {
   headerStyle: {
-    backgroundColor: colors.secondaryBG,
+    backgroundColor: colors.mainBG,
   },
   headerTitleStyle: {
     fontSize: 23,

@@ -5,7 +5,7 @@ import {GStyles} from '../utilities/globalStyles';
 import strings from '../../../assets/strings.json';
 
 const SingleUserScreen = ({route}) => {
-  const DEFAULT_IMG = require('../../../assets/images/defaultPerson.png');
+  const DEFAULT_IMG = require('../../../assets/images/default-person.png');
   const {first_name, last_name, email, address, role, image} =
     route.params.item;
 

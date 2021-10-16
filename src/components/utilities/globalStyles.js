@@ -16,5 +16,5 @@ export const GStyles = {
 export const colors = {
   mainTextColor: '#474173',
   secondaryTextColor: '#e6e3ff',
-  secondaryBG: '#2a292e',
+  mainBG: '#2a292e',
 };

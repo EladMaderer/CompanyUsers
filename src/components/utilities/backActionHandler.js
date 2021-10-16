@@ -1,4 +1,3 @@
-import React from 'react';
 import {BackHandler, Alert} from 'react-native';
 
 const backActionHandler = () => {

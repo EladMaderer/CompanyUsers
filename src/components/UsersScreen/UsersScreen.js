@@ -26,7 +26,8 @@ const UsersScreen = ({navigation}) => {
   const searchTerm = useSelector(({usersReducer}) => usersReducer.searchTerm);
   const [fetchFromIndex, setFetchFromIndex] = useState(0);
   const indexIncrement = fetchFromIndex + FETCH_USERS_LIMIT;
-  const DEFAULT_IMG = require('../../../assets/images/defaultPerson.png');
+  const DEFAULT_IMG = require('../../../assets/images/default-person.png');
+  const isIos = Platform.OS === 'ios';
 
   const {loading, fetchUsersLimit} = useApi();
 
@@ -97,11 +98,11 @@ const UsersScreen = ({navigation}) => {
         keyExtractor={({id}) => id}
         data={users}
         renderItem={UserCard}
-        onEndReached={() => Platform.OS !== 'ios' && onEndScroll()}
-        onMomentumScrollEnd={() => Platform.OS === 'ios' && onEndScroll()}
+        onEndReached={() => !isIos && onEndScroll()}
+        onMomentumScrollEnd={() => isIos && onEndScroll()}
         ListFooterComponent={loading && <ActivityIndicator size={'large'} />}
         ListFooterComponentStyle={{padding: 30}}
-        ListEmptyComponent={!loading && <NoResults style={{marginTop: 20}} />}
+        ListEmptyComponent={!loading && <NoResults style={{marginTop: 40}} />}
       />
     </View>
   );
