@@ -29,7 +29,7 @@ const MainNav = () => (
         options={{title: 'Users'}}
       />
       <Stack.Screen
-        name={routes.SINGLE_USERS_SCREEN}
+        name={routes.SINGLE_USER_SCREEN}
         component={SingleUserScreen}
         options={({route}) => {
           const {first_name, last_name} = route.params.item;

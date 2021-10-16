@@ -58,7 +58,7 @@ const UsersScreen = ({navigation}) => {
           style={styles.userCardButton}
           activeOpacity={0.6}
           onPress={() => {
-            navigation.navigate(routes.SINGLE_USERS_SCREEN, {item});
+            navigation.navigate(routes.SINGLE_USER_SCREEN, {item});
           }}>
           <Image
             style={styles.userImage}
